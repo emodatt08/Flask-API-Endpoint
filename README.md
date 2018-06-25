@@ -8,7 +8,7 @@ This is a general python flask app.
 
 ### Notable Endpoints ###
 
-## Yelp Api to get all businesses using geolocation technology for the YELP Ionic App ##
+### Yelp Api to get all businesses using geolocation technology for the YELP Ionic App ###
 * /api/v1/businesses?longitude=-0.022974&latitude=51.5002 /api/v1/hotels
 
 ### Hotels Api to get all hotels ###

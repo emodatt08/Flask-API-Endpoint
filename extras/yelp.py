@@ -10,12 +10,17 @@ class Yelp:
 
     
     def getBusinesses(self, data):
-        params = urllib.urlencode({'latitude': data('latitude'), 'longitude': data('longitude')})
+        if data('term'):
+            term = data('term') or ''
+        params = urllib.urlencode({'latitude': data('latitude'), 'longitude': data('longitude'), 'term': term})
         request = Request(self.url % params) #send request
         request.add_header('Authorization', self.header)
         response = urlopen(request) #Download Json       
         data = response.read() #Parse json
         return data
+
+
+
 
     
 

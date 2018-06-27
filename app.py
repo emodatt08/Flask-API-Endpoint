@@ -436,6 +436,8 @@ def getBusinesses():
             'review_count' : datas['review_count'],
             'rating' : datas['rating'],
             'distance': datas['distance'],
+            'longitude': datas['coordinates']['longitude'],
+            'latitude': datas['coordinates']['latitude'],
             'display_address' : datas['location']['display_address']
             }
         req_data.append(datas)

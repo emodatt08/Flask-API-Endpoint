@@ -446,6 +446,16 @@ def getBusinesses():
 
 
 
+#endpoint to retrieve TEDX Talks 
+@app.route('/api/v1/talks', methods=['GET'])
+def getTalks():
+    data = []
+    req_data = []
+    position = request.args.get
+    rssdata = Yelp()
+    details = json.loads(rssdata.rss())
+    return details   
+    #return jsonify({"responseCode":"000", "responseMsg":"Success", "businesses": details})
 
 @app.after_request
 def after_request(response):

@@ -45,4 +45,5 @@ def parsetext(html_page):
  	
 
 see = parsetext("http://www.bing.com/search?q=bambi&go=&form=QBLH&qs=n")
+see2 = parsetext("https://yandex.com/search/?text=willow%20smith&lr=20803")
 print see

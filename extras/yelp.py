@@ -1,5 +1,6 @@
 from urllib2 import Request, urlopen
 import urllib
+import feedparser
 from pprint import pprint
 
 class Yelp:
@@ -18,6 +19,15 @@ class Yelp:
         response = urlopen(request) #Download Json       
         data = response.read() #Parse json
         return data
+
+
+    def rss(self):
+       url = " https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ffeeds.feedburner.com%2FTEDTalks_video"
+       request = Request(url) #send request
+       response = urlopen(request) #Download Json    
+       data = response.read()
+       return data
+
 
 
 

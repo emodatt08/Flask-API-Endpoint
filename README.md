@@ -16,3 +16,7 @@ This is a general python flask app.
 
 ### Hotels Api to add a hotel ###
 * /api/v1/hotels [POST]
+
+
+### TedX Api to retrieve tedx talks ###
+* /api/v1/talks [GET]
